@@ -48,7 +48,9 @@ class Process
 	 */
 	public function isRunning()
 	{
-		$result = shell_exec(sprintf("ps %d", $this->getProcessID()) . " | grep -v '<defunct>'");
+		$command = sprintf("ps %d", $this->getProcessID()) . " | grep -v '<defunct>'";
+		
+		$result = trim(shell_exec($command), "\n");
 		
 		return (count(preg_split("/\n/", $result)) > 2);
 	}
