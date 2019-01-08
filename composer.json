@@ -1,7 +1,8 @@
 {
-	"name":        "sidroberts/phalcon-cron",
+	"name":        "qrotux/phalcon-cron",
 	"description": "Cron component for Phalcon.",
 	"type":        "library",
+	"version":     "0.2.1",
 	"license":     "MIT",
 	
 	"authors": [
